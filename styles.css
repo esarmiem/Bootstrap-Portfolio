@@ -1,0 +1,245 @@
+/* Establece el modelo de caja a border-box para todos los elementos */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos para el elemento html */
+html {
+  /* Establece los márgenes y el padding a 0 */
+  margin: 0;
+  padding: 0;
+  /* Habilita el scroll suave */
+  scroll-behavior: smooth;
+}
+
+/* Define algunos colores de Material Design en la raíz del documento */
+:root {
+  --primary-color: #e91e63;
+  --secondary-color: #f06292;
+  --background-color: #ffffff;
+}
+
+/* Estilos para el elemento body */
+body {
+  /* Establece el color de fondo a un tono azulado */
+  background-color: #c9d8e7;
+  /* Establece los márgenes a 0 */
+  margin: 0;
+  /* Establece la fuente y el tamaño por defecto */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  /* Establece el color del texto a un tono gris oscuro */
+  color: #333333;
+}
+
+/* Estilos para los enlaces */
+a {
+  /* Establece el color a una variable CSS definida previamente */
+  color: var(--primary-color);
+  /* Quita la subrayado predeterminado de los enlaces */
+  text-decoration: none;
+}
+
+/* Estilos para los enlaces cuando el cursor está encima */
+a :hover {
+  /* Establece el color a otra variable CSS definida previamente */
+  color: #ffffff;
+}
+
+/* Estilos para el encabezado h1 */
+h1 {
+  /* Establece el tamaño de fuente */
+  font-size: 36px;
+  /* Establece el margen superior e inferior */
+  margin-top: 80px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Alfa Slab One", cursive;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Estilos para el encabezado h2 */
+h2 {
+  /* Establece el tamaño de fuente */
+  font-size: 24px;
+  /* Establece el margen superior e inferior */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Estilos para los párrafos */
+p {
+  /* Establece la altura de línea */
+  line-height: 1.5;
+  /* Establece el margen inferior */
+  margin-bottom: 20px;
+}
+
+/* Estilos de los títulos */
+.title {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 400;
+  font-family: "Alfa Slab One", cursive;
+  background: #42698d;
+  box-shadow: -6px 7px 5px 0px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: -6px 7px 5px 0px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: -6px 7px 5px 0px rgba(0, 0, 0, 0.53);
+  color: #dddddd;
+  margin-top: 0%;
+}
+
+/* Estilo de la barra de navegación en la parte superior de la página */
+.header {
+  position: fixed; /* Fijar la barra de navegación en la parte superior de la página */
+  top: 0; /* Espacio en la parte superior */
+  left: 0; /* Espacio en la parte izquierda */
+  width: 100%; /* Ancho completo */
+  z-index: 9999; /* Z-index alto para asegurarse de que esté por encima de todo lo demás */
+}
+nav {
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1006%26quot%3b)' fill='none'%3e%3crect width='100%' height='100%' x='0' y='0' fill='rgba(207%2c 222%2c 237%2c 1)'%3e%3c/rect%3e%3cpath d='M-6.399254895667344 568.773619537815L83.30922819393045 554.5651916513059 69.10080030742135 464.85670856170805-20.607682782176436 479.0651364482172z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1022.7908662146032 351.2336356394468L959.121949699394 260.30499942682087 854.5634536380596 401.27269230594754z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M349.1927144726784 524.7565061993508L407.9415125191218 480.48611149278236 312.16152143604734 414.49811177640163z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1327.557%2c437.134C1351.113%2c438.264%2c1371.489%2c421.888%2c1382.993%2c401.301C1394.202%2c381.241%2c1395.228%2c356.756%2c1383.52%2c336.984C1372.021%2c317.565%2c1350.107%2c308.579%2c1327.557%2c307.684C1303.014%2c306.71%2c1274.819%2c310.503%2c1263.332%2c332.214C1252.227%2c353.203%2c1268.226%2c376.139%2c1280.623%2c396.392C1292.215%2c415.33%2c1305.378%2c436.07%2c1327.557%2c437.134' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M70.99775588929847 375.3027845743866L113.28820546560009 292.3031039534011 30.28852484461457 250.01265437709947-12.00192473168704 333.01233499808495z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M785.173%2c241.041C833.8%2c240.731%2c873.321%2c207.295%2c898.544%2c165.72C924.951%2c122.194%2c941.744%2c68.653%2c916.622%2c24.373C891.258%2c-20.334%2c836.531%2c-36.215%2c785.173%2c-34.109C737.684%2c-32.162%2c694.873%2c-6.75%2c671.157%2c34.439C647.491%2c75.541%2c646.357%2c125.655%2c669.273%2c167.18C692.997%2c210.169%2c736.073%2c241.354%2c785.173%2c241.041' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M305.754%2c231.934C342.747%2c231.842%2c365.874%2c196.364%2c384.001%2c164.117C401.632%2c132.753%2c415.97%2c96.786%2c399.787%2c64.651C382.207%2c29.743%2c344.802%2c7.049%2c305.754%2c8.74C269.044%2c10.329%2c241.447%2c39.449%2c224.84%2c72.226C209.935%2c101.643%2c211.927%2c135.091%2c226.831%2c164.508C243.591%2c197.59%2c268.669%2c232.026%2c305.754%2c231.934' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1165.4628108129343 99.5337838558683L1188.8473346691023 200.82328477048196 1290.136835583716 177.438760914314 1266.752311727548 76.14925999970032z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M689.9181294688124 175.37565941435048L625.9432930354552 59.96199935289606 510.52963297400083 123.9368357862532 574.504469407358 239.35049584770763z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M339.4078305271355 313.04647639764266L302.2524602039061 396.4988044916454 385.70478829790875 433.6541748148748 422.8601586211382 350.2018467208721z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M621.089%2c569.574C662.688%2c569.956%2c710.115%2c573.316%2c733.405%2c538.845C758.633%2c501.505%2c749.736%2c451.759%2c726.961%2c412.874C704.454%2c374.447%2c665.618%2c347.674%2c621.089%2c347.084C575.557%2c346.481%2c532.895%2c370.501%2c510.243%2c410.003C487.702%2c449.311%2c486.438%2c499.601%2c512.289%2c536.815C535.448%2c570.155%2c580.497%2c569.201%2c621.089%2c569.574' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M758.94%2c410.847C807.129%2c413.247%2c850.353%2c381.826%2c873.654%2c339.576C896.171%2c298.746%2c894.864%2c248.679%2c870.195%2c209.112C846.858%2c171.681%2c803.038%2c154.539%2c758.94%2c155.58C716.77%2c156.576%2c676.931%2c177.296%2c656.426%2c214.159C636.445%2c250.081%2c643.448%2c292.605%2c662.446%2c329.056C683.333%2c369.131%2c713.804%2c408.599%2c758.94%2c410.847' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M855.8062022603482 461.9846866575777L925.3927735918091 512.5422901079627 966.4358931016561 382.8836313855788z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M940.3569982589038 188.15779005753348L1002.8758882828809 296.44368401187273 1048.6428922132432 125.63890003355635z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1329.438990371771 358.42967059536056L1414.4060541030483 260.6862448245652 1316.662628332253 175.71918109328806 1231.6955646009758 273.46260686408334z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M769.8840370197952-53.221289988897965L648.4485465641619 25.63983959665417 848.7451666053473 68.21420046673536z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1006'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+  box-shadow: 0px 11px 12px -7px rgba(0, 0, 0, 0.62);
+  -webkit-box-shadow: 0px 11px 12px -7px rgba(0, 0, 0, 0.62);
+  -moz-box-shadow: 0px 11px 12px -7px rgba(0, 0, 0, 0.62);
+}
+
+/* Estilos de la barra de navegación */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navbar-nav li {
+  list-style: none;
+  padding-right: 8px;
+}
+
+.navbar-nav li:hover {
+  color: #ffffff;
+}
+
+/* Clases personalizadas para elementos de la barra de navegación */
+.li-main {
+  font-weight: 700;
+}
+
+.li-white {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Estilos del contenedor principal */
+.container {
+  margin-top: 18%;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  /* Establece un borde inferior de 1px sólido de un tono gris claro */
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Estilos para la marca de la barra de navegación */
+.navbar-brand {
+  /* Establece el color del texto a una variable CSS definida previamente */
+  color: var(--primary-color);
+  /* Establece el tamaño de fuente */
+  font-size: 24px;
+}
+
+/* Estilos para los elementos de la barra de navegación */
+.nav-item a {
+  /* Establece el color del texto a un tono gris oscuro */
+  color: #333333;
+}
+
+/* Estilo de los enlaces activos en el menú de navegación */
+.nav-item.active a {
+  color: var(--primary-color); /* Color del texto */
+  font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo del contenedor principal */
+.container {
+  padding: 30px 15px; /* Padding del contenedor */
+}
+
+/* Estilos de la sección 2 */
+.section-2 {
+  background-color: #ffffff;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.section-2 p {
+  padding: 8px;
+}
+
+/* Estilos de los títulos de la sección 2 */
+h2 {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Alfa Slab One", cursive;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 0px;
+}
+
+/* Estilo de las imágenes de las columnas */
+.col-md-6 img {
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: box-shadow 0.3s ease-in-out; /* Transición suave de la sombra */
+}
+
+/* Estilo de las imágenes de las columnas al pasar el cursor sobre ellas */
+.col-md-6 img:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Sombra más grande */
+}
+
+/* Estilo del pie de página */
+footer {
+  padding: 20px 0; /* Padding del pie de página */
+  background-color: #42698d;
+}
+
+footer p {
+  font-size: 13px;
+  font-family: sans-serif;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer .container {
+  margin-top: 0px;
+}
+
+/* Estilos de los iconos de redes sociales */
+.social-container {
+  display: flex;
+  justify-content: center;
+}
+
+.social-container svg {
+  width: 50px;
+  height: 50px;
+}
+
+/* Estilos del contenedor de los gifs */
+.gif-container {
+  border-radius: 6px;
+}
+
+/* Media queries para ajustar la imagen y el tamaño del contenedor en dispositivos móviles y pantallas grandes */
+@media (max-width: 930px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
