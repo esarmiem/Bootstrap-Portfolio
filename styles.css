@@ -10,6 +10,20 @@ html {
   padding: 0;
   /* Habilita el scroll suave */
   scroll-behavior: smooth;
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) circle-in-hesitate both;
+  animation-fill-mode: forwards;
+}
+
+@keyframes circle-in-hesitate {
+  0% {
+    clip-path: circle(0%);
+  }
+  40% {
+    clip-path: circle(40%);
+  }
+  100% {
+    clip-path: circle(125%);
+  }
 }
 
 /* Define algunos colores de Material Design en la raíz del documento */
@@ -93,7 +107,7 @@ p {
 }
 
 /* Estilo de la barra de navegación en la parte superior de la página */
-.header {
+.headernav {
   position: fixed; /* Fijar la barra de navegación en la parte superior de la página */
   top: 0; /* Espacio en la parte superior */
   left: 0; /* Espacio en la parte izquierda */
@@ -201,6 +215,78 @@ h2 {
 /* Estilo de las imágenes de las columnas al pasar el cursor sobre ellas */
 .col-md-6 img:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); /* Sombra más grande */
+}
+
+.card {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #42698d;
+  color: #dddddd;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+.header:hover {
+  animation: slide-top 0.5s linear both;
+}
+@keyframes slide-top {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.body {
+  padding: 20px;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  width: 120px;
+  font-size: 16px;
+}
+
+.skill-level {
+  width: 160px;
+  height: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.skill-percent1 {
+  background-color: #ffa500;
+  height: 100%;
+}
+.skill-percent2 {
+  background-color: #007fff;
+  height: 100%;
+}
+.skill-percent3 {
+  background-color: #f7df1e;
+  height: 100%;
+}
+
+.skill-percent-number {
+  margin-left: 20px;
+  font-size: 16px;
 }
 
 /* Estilo del pie de página */

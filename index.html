@@ -16,6 +16,10 @@
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="desktop.css" media="(min-width: 930px)" />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
@@ -23,7 +27,10 @@
   <body>
     <!-- Header -->
     <header>
-      <nav class="header" class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        class="headernav"
+        class="navbar navbar-expand-lg navbar-light bg-light"
+      >
         <a class="navbar-brand" href="#"
           ><p class="title">Frontend Developer</p></a
         >
@@ -56,16 +63,16 @@
 
     <!-- Main content -->
     <main class="container">
-      <section class="section-grid">
-        <section class="section-1" id="about">
-          <h1>Welcome to my portfolio</h1>
+      <section class="section-grid" id="about">
+        <section class="section-1">
+          <h1>Welcome to my portfoli<i class="ti ti-brand-react"></i></h1>
           <p>
-            Hello, my name is Elder and I am a web developer. As a frontend
-            developer, I am passionate about designing user interfaces and
-            creating innovative websites that provide an exceptional user
-            experience. With skills in HTML, CSS, JavaScript, Bootstrap,
-            Tailwind, and SASS, I can create highly customizable and scalable
-            user interfaces that meet the client's needs.
+            Hello, my name is <strong>Elder</strong> and I am a web developer.
+            As a frontend developer, I am passionate about designing user
+            interfaces and creating innovative websites that provide an
+            exceptional user experience. With skills in HTML, CSS, JavaScript,
+            Bootstrap, Tailwind, and SASS, I can create highly customizable and
+            scalable user interfaces that meet the client's needs.
           </p>
           <p>
             Additionally, my experience in React enables me to create highly
@@ -99,6 +106,35 @@
         </section>
       </section>
     </main>
+
+    <section class="section-skill--card">
+      <div class="card">
+        <div class="header">My Skills <i class="ti ti-code"></i></div>
+        <div class="body">
+          <div class="skill">
+            <div class="skill-name"><i class="ti ti-brand-html5"></i>HTML</div>
+            <div class="skill-level">
+              <div class="skill-percent1" style="width: 90%"></div>
+            </div>
+            <div class="skill-percent-number">90%</div>
+          </div>
+          <div class="skill">
+            <div class="skill-name"><i class="ti ti-brand-css3"></i>CSS</div>
+            <div class="skill-level">
+              <div class="skill-percent2" style="width: 90%"></div>
+            </div>
+            <div class="skill-percent-number">90%</div>
+          </div>
+          <div class="skill">
+            <div class="skill-name"><i class="ti ti-brand-javascript"></i>JavaScript</div>
+            <div class="skill-level">
+              <div class="skill-percent3" style="width: 75%"></div>
+            </div>
+            <div class="skill-percent-number">75%</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="contact">
