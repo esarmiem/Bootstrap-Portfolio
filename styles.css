@@ -310,6 +310,15 @@ footer .container {
 .social-container {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-6px);}
+  100% {transform: translateY(0);}
 }
 
 .social-container svg {
